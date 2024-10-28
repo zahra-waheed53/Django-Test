@@ -1,0 +1,21 @@
+{% extends 'ip_app/base.html' %}
+{% block title %}Logs{% endblock %}
+{% block content %}  
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Product Id</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Created at</th>
+    </tr>
+    
+    <tr>
+        <td>{{product.name}}</td>
+        <td>{{product.id}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.created_at}}</td>
+    </tr>
+</table>
+{% endblock %}

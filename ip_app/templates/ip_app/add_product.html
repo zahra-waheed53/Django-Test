@@ -1,0 +1,9 @@
+{% extends 'ip_app/base.html' %}
+{% block title %}Add Product{% endblock %}
+{% block content %}  
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Add Product</button>
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'ip_app/base.html' %}
+{% block title %}Logs{% endblock %}
+{% block content %}  
+<table>
+    <tr>
+        <th>Action Performed</th>
+        <th>Product</th>
+        <th>Product Id</th>
+        <th>Description</th>
+        <th>Dated</th>
+    </tr>
+    {% for log in logs %}
+    <tr>
+        <td>{{log.action_performed}}</td>
+        <td>{{log.product_name}}</td>
+        <td>{{log.product_id}}</td>
+        <td>{{log.description}}</td>
+        <td>{{log.action_time}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
