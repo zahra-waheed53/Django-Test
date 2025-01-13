@@ -15,7 +15,6 @@ class Logs(models.Model):
         ('DELETED', 'delete')
     )
     action_performed = models.CharField(max_length=10, choices=ACTION_CHOICES)
-    product_name = models.CharField(max_length=100)
-    product_id = models.PositiveIntegerField()
+    product_name = models.Foreignkey(Product, on_delete=models.CASCADE)
     description = models.TextField()
     action_time = models.DateTimeField(auto_now_add=True)
